@@ -415,7 +415,7 @@ abbr:hover {
 
 hr {
   border: solid #e3e3e3;
-  border-width: 1px 0 0;
+  border-width: 2px 0 0;
   clear: both;
   margin: 11px 0 30px;
   height: 0;
