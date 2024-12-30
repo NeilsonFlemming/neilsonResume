@@ -71,14 +71,14 @@ let resumeData = {
       specialization: "IT Analyst",
       MonthOfLeaving: "Jul 2013 - Jan 2014",
       Achievements:
-        "I led the company’s direct-to-consumer (DTC) initiative by designing, configuring, and implementing the IT infrastructure for its first six retail stores, while also providing support for office, store, and remote employees during regular hours and after hours. I collaborated with the store operations and design teams to develop a replicable retail store footprint that streamlined the store rollout strategy",
+        "I led the company’s direct-to-consumer (DTC) initiative by designing, configuring, and implementing the IT infrastructure for its first six retail stores, while also providing support for office, store, and remote employees during regular hours and after hours. I collaborated with the store operations and design teams to develop a replicable retail store footprint that streamlined the store rollout strategy.",
     },
     {
       CompanyName: "M.X. Data",
       specialization: "Retail IT Analyst",
       MonthOfLeaving: "Nov 2011 - Jul 2013",
       Achievements:
-        "I served as the retail IT Support Analyst and Project Manager, overseeing an enterprise portfolio that included high-profile luxury retail clients such as Lanvin, Burberry (Brazil), Celine, Marc Jacobs, Fendi, GANT, Carolina Herrera, Jimmy Choo, and L.K. Bennett.. My responsibilities included configuring and deploying POS systems, as well as providing comprehensive IT support for retail stores.",
+        "I served as the retail IT Support Analyst and Project Manager, overseeing an enterprise portfolio that included high-profile luxury retail clients including but not limited to Lanvin, Burberry, Celine, Marc Jacobs, Fendi, GANT, Carolina Herrera, Jimmy Choo, Dover Street Market, and Comme Des Garcons. My responsibilities included configuring and deploying POS systems, as well as providing comprehensive IT support for retail stores.",
     },
     {
       CompanyName: "FENDI North America",
