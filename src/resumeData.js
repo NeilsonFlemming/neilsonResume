@@ -117,7 +117,7 @@ let resumeData = {
   ],
   certifications: [
     {
-      name: "AWS: Certified Cloud Practitioner",
+      name: "AWS : Certified Cloud Practitioner",
       url: "",
     },
     {
@@ -125,11 +125,11 @@ let resumeData = {
       url: "https://drive.google.com/file/d/1wPiWp0PVa_DOnXKjX-oBuMiY_TpBjtCB/view",
     },
     {
-      name: "Google Cloud: Associate Cloud Engineer Certification",
+      name: "Google Cloud : Associate Cloud Engineer Certification",
       url: "https://www.credly.com/badges/350ee9d1-783c-4384-84fa-04818a2f1f34",
     },
     {
-      name: "Microsoft Certified: Azure Fundamentals",
+      name: "Microsoft Certified : Azure Fundamentals",
       url: "https://learn.microsoft.com/en-us/users/neilsonflemmingmailcitytechcunyedu-5313/credentials/b6a73dc67f1bf7b1",
     },
     {
