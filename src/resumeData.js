@@ -117,6 +117,10 @@ let resumeData = {
   ],
   certifications: [
     {
+      name: "AWS: Certified Cloud Practitioner",
+      url: "",
+    },
+    {
       name: "General Assembly : Javascript Certification",
       url: "https://drive.google.com/file/d/1wPiWp0PVa_DOnXKjX-oBuMiY_TpBjtCB/view",
     },
