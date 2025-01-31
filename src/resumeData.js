@@ -118,7 +118,7 @@ let resumeData = {
   certifications: [
     {
       name: "AWS : Certified Cloud Practitioner",
-      url: "",
+      url: "https://www.credly.com/badges/8de6bd4e-136a-4f4f-b234-ff474c90146c",
     },
     {
       name: "General Assembly : Javascript Certification",
