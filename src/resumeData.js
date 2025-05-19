@@ -5,7 +5,7 @@ let resumeData = {
   linkedinId: "NeilsonFlemming",
   skypeid: "Your skypeid",
   roleDescription:
-    "I'm a Principal Technical Architect based in NYC, with 15+ years of experience and 32 certifications under my belt. When I'm not working, I enjoy exploring new technologies, hanging out with family and friends, or catching up on some much-needed sleep.",
+    "I'm a Principal Technical Architect based in NYC, with 16+ years of experience and 32 certifications under my belt. When I'm not working, I enjoy exploring new technologies, hanging out with family and friends, or catching up on some much-needed sleep.",
   socialLinks: [
     {
       name: "linkedin",
@@ -40,7 +40,7 @@ let resumeData = {
   work: [
     {
       CompanyName: "Shopify",
-      specialization: "Senior Solutions Architect - Global COE",
+      specialization: "Senior Staff Solutions Architect - Global COE",
       MonthOfLeaving: "June 2022 - Present",
       Achievements:
         "In my current role, I am responsible for designing technical solutions specifically tailored to the needs of Shopify's enterprise clients, ensuring that these solutions are scalable, secure, and in line with the latest software engineering best practices. My focus includes gathering requirements, creating technical specifications, overseeing the architecture of e-commerce sites and retail stores (POS), and developing proof of concepts.",
