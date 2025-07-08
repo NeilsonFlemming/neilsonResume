@@ -61,10 +61,10 @@ let resumeData = {
     },
     {
       CompanyName: "J.Mclaughlin",
-      specialization: "IT Systems Architect",
+      specialization: "Enterprise Architect",
       MonthOfLeaving: "Jan 2014 - Jan 2015",
       Achievements:
-        "I served as the IT lead for the company’s Order Management System (OMS), Enterprise Resource Planning (ERP), Point-of-Sale (POS), and payment solutions. My responsibilities included supervising the helpdesk team, maintaining IT systems, and managing projects related to new enhancements and integrations.",
+        "I served as the IT lead for the company’s Order Management System (Order Dynamics), Demenad Planning (ITR), and Point-of-Sale (Celerant) platforms. My responsibilities included supervising the helpdesk team, maintaining IT systems, and managing projects related to new enhancements and integrations.",
     },
     {
       CompanyName: "Havaianas",
