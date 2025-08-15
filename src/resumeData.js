@@ -40,7 +40,7 @@ let resumeData = {
   work: [
     {
       CompanyName: "Shopify",
-      specialization: "Senior Staff Solutions Architect - Global COE",
+      specialization: "Principal Architect - Global COE",
       MonthOfLeaving: "June 2022 - Present",
       Achievements:
         "In my current role, I am responsible for designing technical solutions specifically tailored to the needs of Shopify's enterprise clients, ensuring that these solutions are scalable, secure, and in line with the latest software engineering best practices. My focus includes gathering requirements, creating technical specifications, overseeing the architecture of e-commerce sites and retail stores (POS), and developing proof of concepts.",
