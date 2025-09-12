@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LazyImage from './LazyImage';
+
 export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -8,7 +10,11 @@ export default class About extends Component {
 
             <div className="three columns">
 
-               <img className="profile-pic"  src="images/NFlemming_Headshot.jpg" alt="" />
+               <LazyImage 
+                 className="profile-pic"  
+                 src="images/NFlemming_Headshot.jpg" 
+                 alt="Neilson Flemming Professional Headshot" 
+               />
 
             </div>
 
