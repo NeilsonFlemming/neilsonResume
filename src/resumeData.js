@@ -5,7 +5,7 @@ let resumeData = {
   linkedinId: "NeilsonFlemming",
   skypeid: "Your skypeid",
   roleDescription:
-    "I'm a Principal Technical Architect based in NYC, with 16+ years of experience and 32 certifications under my belt. When I'm not working, I enjoy exploring new technologies, hanging out with family and friends, or catching up on some much-needed sleep.",
+    "I'm a Principal Technical Architect based in NYC, with 16+ years of experience and 33 certifications under my belt. When I'm not working, I enjoy exploring new technologies, hanging out with family and friends, or catching up on some much-needed sleep.",
   socialLinks: [
     {
       name: "linkedin",
