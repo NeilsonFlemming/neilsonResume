@@ -116,6 +116,10 @@ let resumeData = {
     },
   ],
   certifications: [
+    {
+      name: "Developing Apps for Shopify",
+      url: "https://www.credly.com/badges/eb7fa02d-4602-4ba9-97c9-f2457ac3a06f,
+    },
      {
       name: "Shopify Customizing the POS Experience",
       url: "https://www.credly.com/badges/1debd3a0-d535-4875-af4f-99514c7aa715",
