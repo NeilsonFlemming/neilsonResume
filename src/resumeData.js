@@ -116,6 +116,10 @@ let resumeData = {
     },
   ],
   certifications: [
+      {
+      name: "Oracle Cloud Infrastructure AI Foundations Associate",
+      url: "",
+    },
     {
       name: "Developing Apps for Shopify",
       url: "https://www.credly.com/badges/eb7fa02d-4602-4ba9-97c9-f2457ac3a06f",
