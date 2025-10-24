@@ -118,7 +118,7 @@ let resumeData = {
   certifications: [
       {
       name: "Oracle Cloud Infrastructure AI Foundations Associate",
-      url: "",
+      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B9D0ED2D5ADAD6D18DFDB2494C6EC436E5320C3E68E0899FFF6154D21D9D07E3",
     },
     {
       name: "Developing Apps for Shopify",
