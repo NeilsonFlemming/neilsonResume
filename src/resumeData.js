@@ -5,7 +5,7 @@ let resumeData = {
   linkedinId: "NeilsonFlemming",
   skypeid: "Your skypeid",
   roleDescription:
-    "I'm a Principal Technical Architect based in NYC, with 16+ years of experience and 34 certifications under my belt. When I'm not working, I enjoy exploring new technologies, hanging out with family and friends, or catching up on some much-needed sleep.",
+    "Principal Technical Architect based in NYC. 16+ years architecting enterprise technology solutions, 34 certifications, and a genuine love for solving complex technical problems. Outside work? I'm exploring new tech, spending quality time with family and friends, or embracing the fine art of doing nothing.",
   socialLinks: [
     {
       name: "linkedin",
@@ -19,8 +19,9 @@ let resumeData = {
     },
   ],
   aboutme:
-    "Throughout my career, I have focused on leading direct-to-consumer technology for prestigious brands such as Fendi (LVMH), J. McLaughlin, Frye Boots, and many others. I have successfully implemented e-commerce, point-of-sale, order management, and ERP platforms. I was actively engaged in platform architecture, overseeing the implementation process, developing integrations, and creating standard operating procedures.\n" +
-    "Currently, I am positioned on the technology side, enabling me to utilize my extensive hands-on experience in commerce to promote best practices, advocate for best-in-class architecture, and demonstrate effective change management.",
+    "I've spent my career building commerce platforms for brands you'd recognize— Fendi, J. McLaughlin, Frye, and plenty of others. The full technology stack: e-commerce sites, point-of-sale systems, order management, ERP integrations, you name it. " +
+    "But I wasn't just managing these projects from a distance. I was in the trenches designing architectures, building integrations, writing SOPs, and making sure everything worked 24/7. " +
+    "That hands-on experience is what makes me effective today. I work with enterprise brands on their commerce technology strategy—helping them choose the right platforms, architect solutions that scale, and navigate complex transformations. I've made the mistakes, learned the lessons, and now I help others skip the painful parts.",
   address: "",
   email: "NeilsonFlemming@Gmail.com",
   education: [
@@ -43,49 +44,55 @@ let resumeData = {
       specialization: "Principal Architect - Global COE",
       MonthOfLeaving: "June 2022 - Present",
       Achievements:
-        "In my current role, I am responsible for designing technical solutions specifically tailored to the needs of Shopify's enterprise clients, ensuring that these solutions are scalable, secure, and in line with the latest software engineering best practices. My focus includes gathering requirements, creating technical specifications, overseeing the architecture of e-commerce sites and retail stores (POS), and developing proof of concepts.",
+        "I design technical solutions for Shopify's enterprise clients—the kind with complex requirements, legacy systems, and high stakes. My job is to make sure these solutions are scalable, secure, and actually follow modern best practices (not just buzzwords). " +
+        "Day-to-day, I'm gathering requirements, writing technical specs, architecting e-commerce and retail (POS) solutions, and building proof-of-concepts to show what's possible. I work closely with enterprise brands and their executives to help them understand how Shopify can meet their needs, then I design the architecture to make it happen.",
     },
     {
       CompanyName: "Salesforce",
       specialization: "Technical Architect (Professional Services)",
       MonthOfLeaving: "May 2020 - June 2022",
       Achievements:
-        "I provided enterprise-grade cloud solutions leveraging Salesforce's advanced technology to enhance operational efficiency and help companies adapt to evolving demands. My responsibilities included collaborating with C-level executives on strategic decisions, developing roadmaps, and recommending best practices. A notable example of my work was leading a team of retail engineers to implement a front-end user interface using Lightning Web Components, which significantly improved the in-store customer experience for Salesforce's largest client at that time.",
+        "I built enterprise cloud solutions for Salesforce's largest clients, focusing on operational efficiency and helping companies modernize their tech. This meant working directly with C-level executives on strategic decisions, developing technology roadmaps, and recommending best practices they could actually implement.",
     },
     {
       CompanyName: "Global Brands Group",
       specialization: "Sr. Manager Direct To Consumer Platforms",
       MonthOfLeaving: "Jan 2015 - May 2020",
       Achievements:
-        "I was responsible for architecting, implementing, and maintaining technology solutions for enterprise eCommerce and retail locations, collaborating with top executives to develop a direct-to-consumer roadmap that capitalized on new technologies and improvement opportunities. I provided strategic guidance for the company's DTC brands in areas such as corporate operations and supply chain management, while also organizing a dedicated support team to ensure continuous assistance for retail and digital operations.",
+        "I architected, implemented, and maintained the entire technology stack for enterprise e-commerce and retail operations. This included working with executives to build a DTC roadmap that took advantage of emerging technologies and identified areas where we could improve. " +
+        "Beyond the technical side, I provided strategic guidance on corporate operations and supply chain management, and built a dedicated support team to keep retail and digital operations running 24/7. Basically, I made sure the business had the technology and support infrastructure it needed to scale.",
     },
     {
       CompanyName: "J.Mclaughlin",
       specialization: "Enterprise Architect",
       MonthOfLeaving: "Jan 2014 - Jan 2015",
       Achievements:
-        "I served as the IT lead for the company’s Order Management System (Order Dynamics), Demenad Planning (ITR), and Point-of-Sale (Celerant) platforms. My responsibilities included supervising the helpdesk team, maintaining IT systems, and managing projects related to new enhancements and integrations.",
+        "I was the IT lead for the company's core platforms: Order Management (Order Dynamics), Demand Planning (ITR), and Point-of-Sale (Celerant). This meant overseeing the helpdesk team, keeping all IT systems running smoothly, and managing projects for new features and integrations. " +
+        "It was a hands-on role—part architect, part project manager, part firefighter when things went wrong.",
     },
     {
       CompanyName: "Havaianas",
       specialization: "IT Analyst",
       MonthOfLeaving: "Jul 2013 - Jan 2014",
       Achievements:
-        "I led the company’s direct-to-consumer (DTC) initiative by designing, configuring, and implementing the IT infrastructure for its first six retail stores, while also providing support for office, store, and remote employees during regular hours and after hours. I collaborated with the store operations and design teams to develop a replicable retail store footprint that streamlined the store rollout strategy.",
+        "I led Havaianas' direct-to-consumer launch by designing and implementing the IT infrastructure for their first six retail stores. This included supporting office, store, and remote employees around the clock. " +
+        "I worked closely with store operations and design teams to create a replicable store footprint—basically a playbook that made opening new locations much faster and more consistent. It turned what could have been six custom implementations into a scalable rollout strategy.",
     },
     {
       CompanyName: "M.X. Data",
       specialization: "Retail IT Analyst",
       MonthOfLeaving: "Nov 2011 - Jul 2013",
       Achievements:
-        "I served as the retail IT Support Analyst and Project Manager, overseeing an enterprise portfolio that included high-profile luxury retail clients including but not limited to Lanvin, Burberry, Celine, Marc Jacobs, Fendi, GANT, Carolina Herrera, Jimmy Choo, Dover Street Market, and Comme Des Garcons. My responsibilities included configuring and deploying POS systems, as well as providing comprehensive IT support for retail stores.",
+        "I was the IT Support Analyst and Project Manager for a portfolio of luxury retail clients—brands like Lanvin, Burberry, Celine, Marc Jacobs, Fendi, GANT, Carolina Herrera, Jimmy Choo, Dover Street Market, and Comme Des Garcons. " +
+        "My job was configuring and deploying POS systems, then providing ongoing IT support to keep their retail stores running. It was high-pressure work—when a boutique on Fifth Avenue goes down, you fix it fast.",
     },
     {
       CompanyName: "FENDI North America",
       specialization: "IT Analyst",
       MonthOfLeaving: "Nov 2010 - Nov 2011",
       Achievements:
-        "As one half of a two-person IT department, I managed all IT systems and hardware for corporate offices and retail locations in the US and Mexico. I consistently collaborated with LVMH headquarters to implement global IT initiatives.",
+        "I was half of a two-person IT department managing all systems and hardware for FENDI's corporate offices and retail locations across the US and Mexico. Small team, big responsibility. " +
+        "I also worked closely with LVMH headquarters to roll out global IT initiatives, which meant balancing local needs with corporate standards—always an interesting challenge.",
     },
   ],
   skillsDescription: "",
@@ -116,7 +123,7 @@ let resumeData = {
     },
   ],
   certifications: [
-      {
+    {
       name: "Oracle Cloud Infrastructure AI Foundations Associate",
       url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B9D0ED2D5ADAD6D18DFDB2494C6EC436E5320C3E68E0899FFF6154D21D9D07E3",
     },
@@ -124,7 +131,7 @@ let resumeData = {
       name: "Developing Apps for Shopify",
       url: "https://www.credly.com/badges/eb7fa02d-4602-4ba9-97c9-f2457ac3a06f",
     },
-     {
+    {
       name: "Shopify Customizing the POS Experience",
       url: "https://www.credly.com/badges/1debd3a0-d535-4875-af4f-99514c7aa715",
     },
