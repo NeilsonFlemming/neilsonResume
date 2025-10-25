@@ -19,7 +19,7 @@ let resumeData = {
     },
   ],
   aboutme:
-    "I've spent my career building commerce platforms for brands you'd recognize— Fendi, J. McLaughlin, Frye, and plenty of others. The full technology stack: e-commerce sites, point-of-sale systems, order management, ERP integrations, you name it. " +
+    "I've spent my career creating and managing technology stacks for brands you'd recognize — Fendi, J. McLaughlin, Frye Boots, Havaianas, and plenty of others. The full technology stack: e-commerce sites, point-of-sale systems, order management, ERP integrations, you name it. " +
     "But I wasn't just managing these projects from a distance. I was in the trenches designing architectures, building integrations, writing SOPs, and making sure everything worked 24/7. " +
     "That hands-on experience is what makes me effective today. I work with enterprise brands on their commerce technology strategy—helping them choose the right platforms, architect solutions that scale, and navigate complex transformations. I've made the mistakes, learned the lessons, and now I help others skip the painful parts.",
   address: "",
