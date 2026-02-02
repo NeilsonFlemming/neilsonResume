@@ -41,11 +41,10 @@ let resumeData = {
   work: [
     {
       CompanyName: "Shopify",
-      specialization: "Principal Architect - Global COE",
+      specialization: "Head of Enterprise Solution Architecture, North America",
       MonthOfLeaving: "June 2022 - Present",
       Achievements:
-        "I design technical solutions for Shopify's enterprise clients—the kind with complex requirements, legacy systems, and high stakes. My job is to make sure these solutions are scalable, secure, and actually follow modern best practices (not just buzzwords). " +
-        "Day-to-day, I'm gathering requirements, writing technical specs, architecting e-commerce and retail (POS) solutions, and building proof-of-concepts to show what's possible. I work closely with enterprise brands and their executives to help them understand how Shopify can meet their needs, then I design the architecture to make it happen.",
+        "Leading a team of enterprise architects who sit at the intersection of technical depth and business strategy. We work with Shopify's largest prospective customers, Fortune 500 retailers, iconic global brands, to design scalable solutions that prove what's possible on the platform. Part strategist, part technical advisor, part trusted consultant.",
     },
     {
       CompanyName: "Salesforce",
