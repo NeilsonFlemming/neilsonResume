@@ -58,8 +58,7 @@ let resumeData = {
       specialization: "Sr. Manager Direct To Consumer Platforms",
       MonthOfLeaving: "Jan 2015 - May 2020",
       Achievements:
-        "I architected, implemented, and maintained the entire technology stack for enterprise e-commerce and retail operations. This included working with executives to build a DTC roadmap that took advantage of emerging technologies and identified areas where we could improve. " +
-        "Beyond the technical side, I provided strategic guidance on corporate operations and supply chain management, and built a dedicated support team to keep retail and digital operations running 24/7. Basically, I made sure the business had the technology and support infrastructure it needed to scale.",
+        "I owned the entire technology stack for a portfolio of enterprise retail and e-commerce brands - architecture, implementation, and ongoing operations. That meant partnering with executives to build a DTC roadmap that actually leveraged emerging tech instead of chasing trends, identifying where we were leaving money on the table, and fixing it. I also built out a dedicated support organization to keep digital and retail operations running around the clock. The brands got the infrastructure they needed to scale. I got to build it from the ground up.",
     },
     {
       CompanyName: "J.Mclaughlin",
