@@ -27,17 +27,9 @@ class App extends Component {
         <Header resumeData={resumeData}/>
         <Suspense fallback={<LoadingSpinner />}>
           <About resumeData={resumeData}/>
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
           <Resume resumeData={resumeData}/>
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
           <Certs resumeData={resumeData}/>
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
           <Skills resumeData={resumeData}/>
-        </Suspense>
-        <Suspense fallback={<LoadingSpinner />}>
           <Footer resumeData={resumeData}/>
         </Suspense>
       </div>

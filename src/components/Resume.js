@@ -13,9 +13,8 @@ export default class Resume extends Component {
 
           <div className="nine columns main-col">
             {resumeData.work &&
-              resumeData.work.map((item) => {
-                return (
-                  <div className="row item">
+              resumeData.work.map((item, index) => (
+                  <div key={item.CompanyName || index} className="row item">
                     <div className="twelve columns">
                       <h3>{item.CompanyName}</h3>
                       <p className="info">
@@ -28,8 +27,7 @@ export default class Resume extends Component {
                       <p>{item.Achievements}</p>
                     </div>
                   </div>
-                );
-              })}
+              ))}
           </div>
         </div>
         <div className="row education">
@@ -41,9 +39,8 @@ export default class Resume extends Component {
 
           <div className="nine columns main-col">
             {resumeData.education &&
-              resumeData.education.map((item) => {
-                return (
-                  <div className="row item">
+              resumeData.education.map((item, index) => (
+                  <div key={item.UniversityName || index} className="row item">
                     <div className="twelve columns">
                       <h3>{item.UniversityName}</h3>
                       <p className="info">
@@ -56,8 +53,7 @@ export default class Resume extends Component {
                       <p>{item.Achievements}</p>
                     </div>
                   </div>
-                );
-              })}
+              ))}
           </div>
         </div>
       </section>

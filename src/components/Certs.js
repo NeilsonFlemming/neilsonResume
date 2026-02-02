@@ -10,15 +10,13 @@ export default class Certs extends Component {
                     </div>
                     <div className="nine columns main-col">
                         {
-                            resumeData.certifications && resumeData.certifications.map((item,index) => {
-                                return(
-                                    <div className="row item">
+                            resumeData.certifications && resumeData.certifications.map((item, index) => (
+                                    <div key={item.name || index} className="row item">
                                         <div className="twelve columns">
-                                            <h6> <a href={item.url} target={"_blank"}> {index+1}.{item.name}</a> </h6>
+                                            <h6> <a href={item.url} target="_blank" rel="noopener noreferrer"> {index+1}.{item.name}</a> </h6>
                                         </div>
                                     </div>
-                                )
-                            })
+                            ))
                         }
                     </div>
                 </div>

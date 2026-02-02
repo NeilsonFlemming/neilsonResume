@@ -20,14 +20,12 @@ export default  class Skills extends Component {
 
                         <ul className="skills">
                         {
-                        resumeData.skills && resumeData.skills.map((item) => {
-                            return(
-                            <li>
+                        resumeData.skills && resumeData.skills.map((item) => (
+                            <li key={item.skillname}>
                             <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
                             </span><em>{item.skillname}</em>
                             </li>
-                            )
-                        })
+                        ))
                         }
 
                             </ul>
