@@ -15,14 +15,10 @@ const resumeData = {
   ],
 
   aboutme:
-    "I've spent my career creating and managing technology stacks for brands you'd recognize, Fendi, " +
-    "J. McLaughlin, Frye Boots, Havaianas, and plenty of others. The full technology stack: e-commerce sites, " +
-    "point-of-sale systems, order management, ERP integrations, you name it. " +
-    "I wasn't just managing these projects from a distance. I was in the trenches designing architectures, " +
-    "building/coding integrations, writing SOPs, and making sure everything worked 24/7. " +
-    "That hands-on experience is what makes me effective today. I work with enterprise brands on their commerce " +
-    "technology strategy, helping them choose the right platforms, architect solutions that scale, and navigate " +
-    "complex transformations. I've made the mistakes, learned the lessons, and now I help others avoid the painful parts.",
+    "I've spent my career creating and managing technology stacks for brands you'd recognize, Fendi, Frye Boots, J. McLaughlin, " +
+    "Havaianas, and plenty of others. The full technology stack: e-commerce sites, point-of-sale systems, order management, ERP integrations, you name it. " +
+    "I wasn't just managing these projects from a distance. I was in the trenches designing architectures, building/coding integrations, writing SOPs, and making sure everything worked 24/7. " +
+    "That hands-on experience is what makes me effective today. I work with enterprise brands on their commerce technology strategy, helping them choose the right platforms, architect solutions that scale, and navigate complex transformations. I've made the mistakes, learned the lessons, and now I help others avoid the painful parts.",
 
   address: "",
   email: "NeilsonFlemming@Gmail.com",
@@ -68,8 +64,8 @@ const resumeData = {
       specialization: "Senior Manager, Direct To Consumer Platforms - COE",
       MonthOfLeaving: "Jan 2015 - May 2020",
       Achievements:
-        "I led a three-person Center of Excellence responsible for the full technology stack across " +
-        "Global Brands Group's portfolio (20+) of enterprise retail and e-commerce brands. My team owned architecture, " +
+        "I led a three-person center of excellence responsible for the full technology stack across " +
+        "Global Brands Group's portfolio (20+ brands) of enterprise retail and e-commerce brands. My team owned architecture, " +
         "implementation, and day-to-day operations, everything from platform selection to integration design " +
         "to 24/7 support. We partnered directly with brand executives to build DTC roadmaps grounded in " +
         "emerging tech rather than hype, identified where the business was leaving revenue on the table, and " +
