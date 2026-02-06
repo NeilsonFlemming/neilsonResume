@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import resumeData from './resumeData';
 
@@ -20,21 +20,19 @@ const LoadingSpinner = () => (
   </div>
 );
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header resumeData={resumeData}/>
-        <Suspense fallback={<LoadingSpinner />}>
-          <About resumeData={resumeData}/>
-          <Resume resumeData={resumeData}/>
-          <Certs resumeData={resumeData}/>
-          <Skills resumeData={resumeData}/>
-          <Footer resumeData={resumeData}/>
-        </Suspense>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <Header resumeData={resumeData}/>
+      <Suspense fallback={<LoadingSpinner />}>
+        <About resumeData={resumeData}/>
+        <Resume resumeData={resumeData}/>
+        <Certs resumeData={resumeData}/>
+        <Skills resumeData={resumeData}/>
+        <Footer resumeData={resumeData}/>
+      </Suspense>
+    </div>
+  );
 }
 
 export default App;

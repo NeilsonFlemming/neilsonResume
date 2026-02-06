@@ -26,9 +26,7 @@ e. Others
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
 
-@import url("fonts.css");
-@import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
+/* Fonts and icon fonts now loaded via <link> tags in index.html for parallel loading */
 
 /* ------------------------------------------------------------------
  /* b. Reset
@@ -209,8 +207,6 @@ table {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -226,8 +222,6 @@ body {
   font-size: 15px;
   line-height: 30px;
   color: #838c95;
-
-  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -281,8 +275,6 @@ h5 {
 h6 {
   font-size: 14px;
   line-height: 30px;
-}
-.subheader {
 }
 
 p {
@@ -429,9 +421,6 @@ a:visited {
   outline: 0;
   color: #11abb0;
 
-  -webkit-transition: color 0.3s ease-in-out;
-  -moz-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
 a:hover,
@@ -486,10 +475,6 @@ ol ul li {
 li {
   line-height: 18px;
   margin-bottom: 12px;
-}
-ul.large li {
-}
-li p {
 }
 
 /* ---------------------------------------------------------------------
@@ -602,15 +587,7 @@ dd {
   color: #6e757c;
   background-color: #e6e8eb;
 
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
   border-radius: 3px;
 }
 .pagination .page-numbers:hover {
@@ -626,9 +603,6 @@ dd {
 .pagination .inactive:hover {
   background-color: #e6e8eb;
   color: #a9adb2;
-}
-.pagination .prev,
-.pagination .next {
 }
 
 /*  5. Images  --------------------------------------------------------- */
@@ -664,15 +638,7 @@ input[type="button"] {
   cursor: pointer;
   height: auto;
 
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -740,9 +706,6 @@ select {
   background: #d3d9d9;
 }
 
-/* select { padding: 0;
-    width: 220px;
-    } */
 
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -791,10 +754,6 @@ input[type="checkbox"] {
   width: 96%;
   max-width: 1020px;
   margin: 0 auto;
-}
-/* fixed width for IE8 */
-.ie .row {
-  width: 1000px;
 }
 
 .narrow .row {
