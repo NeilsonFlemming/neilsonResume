@@ -1,0 +1,154 @@
+---
+import '../styles/global.css';
+import resume from '../data/resume';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${resume.name} — ${resume.role}`,
+  description = `${resume.name} — ${resume.role} based in NYC. ${resume.tagline}`,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/images/og-image.png', Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: resume.name,
+  jobTitle: resume.role,
+  description: resume.tagline,
+  url: Astro.site?.toString(),
+  image: new URL('/images/NFlemming_Headshot.png', Astro.site).toString(),
+  email: `mailto:${resume.email}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'New York',
+    addressRegion: 'NY',
+    addressCountry: 'US',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'New York City College of Technology',
+  },
+  sameAs: resume.socialLinks.map((l) => l.url),
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Shopify',
+    url: 'https://www.shopify.com',
+  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'AWS Certified Cloud Practitioner',
+      credentialCategory: 'certification',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Google Cloud Associate Cloud Engineer',
+      credentialCategory: 'certification',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Salesforce Application Architect',
+      credentialCategory: 'certification',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Salesforce Integration Architect',
+      credentialCategory: 'certification',
+    },
+  ],
+  knowsAbout: [
+    'Enterprise Architecture',
+    'E-commerce',
+    'Solution Architecture',
+    'Salesforce',
+    'Shopify',
+    'Point of Sale',
+    'Order Management',
+    'Cloud Infrastructure',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={resume.name} />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Neilson Flemming, Principal Technical Architect, Enterprise Architecture, Solution Architect, Shopify, Salesforce, E-commerce, NYC"
+    />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={`${resume.name} Resume`} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Font preloads -->
+    <link
+      rel="preload"
+      href="/fonts/InstrumentSerif-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/GeistVF.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://www.credly.com" />
+    <link rel="dns-prefetch" href="https://www.salesforce.com" />
+    <link rel="dns-prefetch" href="https://www.linkedin.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+  </head>
+  <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-text-primary focus:rounded-md focus:text-sm focus:font-sans"
+    >
+      Skip to content
+    </a>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neilsonflemming.com/sitemap-index.xml

@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/GeistVF.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMonoVF.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-secondary font-sans leading-relaxed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-text-primary;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-text-primary;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-serif text-text-primary mb-2;
+  }
+
+  .section-rule {
+    @apply w-24 h-0.5 bg-accent mb-10;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+  }
+
+  .card {
+    @apply bg-bg-elevated border border-bg-subtle/80 rounded-lg p-6 md:p-8
+           transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply card;
+  }
+
+  .card-interactive:hover {
+    @apply -translate-y-1 border-accent/20;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.18), 0 0 40px rgba(59, 130, 246, 0.06);
+  }
+
+  .accent-border-left {
+    @apply border-accent;
+    border-left-width: 3px;
+  }
+
+  .tag {
+    @apply inline-block px-4 py-2 text-sm font-mono rounded-full
+           bg-bg-subtle text-text-secondary border border-bg-subtle
+           transition-all duration-200;
+  }
+
+  .tag:hover {
+    @apply border-accent/30 text-text-primary bg-bg-elevated;
+  }
+
+  .section-glow-top {
+    background-image: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.10), transparent 70%);
+  }
+
+  .section-glow-left {
+    background-image: radial-gradient(ellipse at 0% 50%, rgba(59, 130, 246, 0.10), transparent 60%);
+  }
+
+  .noise-bg {
+    position: relative;
+  }
+
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    z-index: 0;
+  }
+
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 50;
+    background: linear-gradient(to right, #3B82F6, #60A5FA);
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #FAFAFA 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: 0.15em;
+    line-height: 1.1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

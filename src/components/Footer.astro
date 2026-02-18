@@ -1,0 +1,86 @@
+---
+import resume from '../data/resume';
+import LinkedIn from './icons/LinkedIn.astro';
+import GitHub from './icons/GitHub.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="relative py-20 md:py-28 overflow-hidden noise-bg" role="contentinfo">
+  <!-- Gradient top border -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" aria-hidden="true"></div>
+
+  <!-- Radial accent glow -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(59,130,246,0.10) 0%, transparent 100%);"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Faint grid pattern (matching Hero) -->
+  <div
+    class="absolute inset-0"
+    style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px;"
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative z-10 section-container">
+    <!-- Glassmorphic CTA card -->
+    <div class="max-w-lg mx-auto bg-bg-elevated/60 backdrop-blur-md border border-bg-subtle/60 rounded-xl p-8 md:p-10 text-center transition-all duration-300 hover:border-accent/20 hover:shadow-glow">
+      <h2 class="text-2xl md:text-3xl font-serif text-gradient mb-2">Get in Touch</h2>
+      <p class="text-text-muted text-sm font-sans mb-6">Have a project in mind? Let's connect.</p>
+
+      <a
+        href={`mailto:${resume.email}`}
+        class="inline-block text-lg md:text-xl text-text-primary hover:text-accent transition-colors duration-200 font-sans mb-8"
+      >
+        {resume.email}
+      </a>
+
+      <div class="flex items-center justify-center gap-3">
+        <a
+          href={resume.socialLinks[0].url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile (opens in new tab)"
+          class="text-text-muted hover:text-accent transition-all duration-200 p-2.5 rounded-lg border border-bg-subtle/60 hover:border-accent/30 hover:shadow-glow-sm"
+        >
+          <LinkedIn class="w-5 h-5" />
+        </a>
+        <a
+          href={resume.socialLinks[1].url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile (opens in new tab)"
+          class="text-text-muted hover:text-accent transition-all duration-200 p-2.5 rounded-lg border border-bg-subtle/60 hover:border-accent/30 hover:shadow-glow-sm"
+        >
+          <GitHub class="w-5 h-5" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright + Back to top -->
+    <div class="flex items-center justify-between pt-8 mt-12 border-t border-bg-subtle/50">
+      <p class="text-sm text-text-muted">
+        &copy; {year} {resume.name}
+      </p>
+      <a
+        href="#home"
+        aria-label="Back to top"
+        class="text-text-muted hover:text-accent transition-colors duration-200 text-sm font-sans flex items-center gap-1"
+      >
+        <svg
+          class="w-4 h-4 rotate-180"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+        Back to top
+      </a>
+    </div>
+  </div>
+</footer>

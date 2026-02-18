@@ -1,0 +1,107 @@
+---
+import resume from '../data/resume';
+import LinkedIn from './icons/LinkedIn.astro';
+import ArrowDown from './icons/ArrowDown.astro';
+---
+
+<header id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg">
+  <!-- Radial accent glow from top center -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59,130,246,0.15) 0%, transparent 100%);"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Secondary glow blob bottom-left for depth -->
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(ellipse 60% 40% at 20% 80%, rgba(59,130,246,0.06) 0%, transparent 100%);"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Visible grid pattern -->
+  <div
+    class="absolute inset-0"
+    style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 64px 64px;"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Bottom gradient fade into next section -->
+  <div
+    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-bg-primary"
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative z-10 section-container text-center md:text-left max-w-3xl">
+    <!-- Thin decorative line -->
+    <div class="w-12 h-px bg-accent/50 mx-auto md:mx-0 mb-6 animate-fade-up" aria-hidden="true"></div>
+
+    <h1
+      class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif text-gradient mb-4 animate-fade-up"
+    >
+      {resume.name}
+    </h1>
+    <p
+      class="text-lg md:text-xl font-sans text-text-secondary mb-6 animate-fade-up"
+      style="animation-delay: 150ms;"
+    >
+      {resume.role}
+    </p>
+    <p
+      class="text-base md:text-lg font-sans text-text-muted max-w-xl mx-auto md:mx-0 mb-10 animate-fade-up"
+      style="animation-delay: 300ms;"
+    >
+      {resume.tagline}
+    </p>
+
+    <div
+      class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-up"
+      style="animation-delay: 450ms;"
+    >
+      <a
+        href="#experience"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-accent text-text-primary font-sans font-medium text-base rounded-md hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 hover:shadow-accent/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        View Resume
+      </a>
+      <a
+        href={resume.socialLinks[0].url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile (opens in new tab)"
+        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-text-muted/30 text-text-secondary font-sans font-medium text-base rounded-md hover:border-text-muted hover:text-text-primary transition-all duration-200"
+      >
+        <LinkedIn class="w-4 h-4" />
+        LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a
+    href="#about"
+    aria-label="Scroll to about section"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted hover:text-accent transition-colors duration-200 animate-bounce"
+    style="animation-delay: 1s;"
+  >
+    <ArrowDown class="w-6 h-6" />
+  </a>
+</header>
+
+<style>
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+</style>

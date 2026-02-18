@@ -1,0 +1,63 @@
+---
+import resume from '../data/resume';
+import { Image } from 'astro:assets';
+import headshot from '../../public/images/NFlemming_Headshot.png';
+---
+
+<section id="about" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-warm section-glow-left" aria-labelledby="about-heading">
+  <div class="section-container">
+    <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+      <!-- Headshot -->
+      <div class="md:col-span-4 flex justify-center md:justify-start">
+        <Image
+          src={headshot}
+          alt="Neilson Flemming, Principal Technical Architect"
+          width={400}
+          height={400}
+          format="webp"
+          quality={90}
+          loading="eager"
+          decoding="async"
+          class="rounded-lg w-full max-w-[280px] ring-2 ring-accent/20 ring-offset-4 ring-offset-bg-primary shadow-2xl shadow-accent/10"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="md:col-span-8">
+        <span class="text-xs font-mono text-accent/40 mb-1 block">01</span>
+        <h2 id="about-heading" class="section-heading">About</h2>
+        <div class="section-rule"></div>
+
+        <div class="space-y-4 text-text-secondary leading-relaxed mb-8">
+          {resume.aboutParagraphs.map((p) => <p>{p}</p>)}
+        </div>
+
+        <!-- Quick Stats Banner -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 bg-bg-elevated/80 border border-bg-subtle rounded-lg py-5 px-4 mb-8">
+          <div class="flex flex-col items-center justify-center sm:border-r border-b sm:border-b-0 border-accent/20 pb-4 sm:pb-0">
+            <span class="text-3xl md:text-4xl font-serif text-accent">16+</span>
+            <span class="text-xs font-mono tracking-widest uppercase text-text-muted mt-1">Years</span>
+          </div>
+          <div class="flex flex-col items-center justify-center sm:border-r border-b sm:border-b-0 border-accent/20 py-4 sm:py-0">
+            <span class="text-3xl md:text-4xl font-serif text-accent">34</span>
+            <span class="text-xs font-mono tracking-widest uppercase text-text-muted mt-1">Certifications</span>
+          </div>
+          <div class="flex flex-col items-center justify-center pt-4 sm:pt-0">
+            <span class="text-base md:text-lg font-serif text-text-primary text-center">
+              Brand-Side <span class="text-accent">&rarr;</span> Platform-Side
+            </span>
+            <span class="text-xs font-mono tracking-widest uppercase text-text-muted mt-1">Career Arc</span>
+          </div>
+        </div>
+
+        <!-- Email CTA -->
+        <a
+          href={`mailto:${resume.email}`}
+          class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-text-primary font-sans font-medium text-sm rounded-md hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 hover:shadow-accent/30"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

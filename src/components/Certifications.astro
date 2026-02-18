@@ -1,0 +1,128 @@
+---
+import resume from '../data/resume';
+import { certCategories } from '../data/resume';
+---
+
+<section id="certifications" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-teal" aria-labelledby="certs-heading">
+  <div class="section-container">
+    <span class="text-xs font-mono text-accent/40 mb-1 block">04</span>
+    <div class="flex items-baseline gap-3">
+      <h2 id="certs-heading" class="section-heading">Certifications</h2>
+      <span class="text-lg font-mono bg-accent/10 text-accent border border-accent/20 px-2.5 py-0.5 rounded-full">{resume.certifications.length}</span>
+    </div>
+    <div class="section-rule"></div>
+
+    <!-- Vendor Logo Strip -->
+    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-6 py-6 border-b border-bg-subtle" aria-label="Certification vendors — click to expand related section">
+      {[
+        { name: 'Shopify', src: '/images/logos/shopify.svg', category: 'shopify' },
+        { name: 'Salesforce', src: '/images/logos/salesforce.svg', category: 'salesforce' },
+        { name: 'AWS', src: '/images/logos/aws.svg', category: 'cloud' },
+        { name: 'Google Cloud', src: '/images/logos/googlecloud.svg', category: 'cloud' },
+        { name: 'Azure', src: '/images/logos/azure.svg', category: 'cloud' },
+        { name: 'Oracle', src: '/images/logos/oracle.svg', category: 'cloud' },
+        { name: 'VMware', src: '/images/logos/vmware.svg', category: 'cloud' },
+      ].map((vendor) => (
+        <button
+          type="button"
+          class="cert-logo-btn w-20 h-20 flex items-center justify-center rounded-xl bg-bg-subtle/30 border border-bg-subtle/50 transition-all duration-200 hover:border-accent/20 hover:bg-bg-subtle/60 hover:scale-105 cursor-pointer"
+          data-category={vendor.category}
+          title={`Show ${vendor.name} certifications`}
+          aria-label={`Show ${vendor.name} certifications`}
+        >
+          <img src={vendor.src} alt={vendor.name} class="h-8 w-auto pointer-events-none" loading="lazy" />
+        </button>
+      ))}
+    </div>
+
+    <!-- Expand / Collapse All -->
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <button
+        type="button"
+        id="expand-all-certs"
+        class="text-xs font-mono uppercase tracking-wider text-text-muted hover:text-accent border border-bg-subtle/50 hover:border-accent/20 px-4 py-2 rounded-md transition-all duration-200"
+      >
+        Expand All
+      </button>
+      <button
+        type="button"
+        id="collapse-all-certs"
+        class="text-xs font-mono uppercase tracking-wider text-text-muted hover:text-accent border border-bg-subtle/50 hover:border-accent/20 px-4 py-2 rounded-md transition-all duration-200"
+      >
+        Collapse All
+      </button>
+    </div>
+
+    <!-- Certification Groups -->
+    <div id="cert-groups" class="space-y-6">
+      {certCategories.map((cat) => {
+        const certs = resume.certifications.filter((c) => c.category === cat.key);
+        return (
+          <details class="cert-detail scroll-mt-24 group bg-bg-elevated/50 border border-bg-subtle/50 rounded-lg p-6 md:p-8 transition-all duration-300 hover:border-accent/10 reveal" data-category={cat.key}>
+            <summary class="flex items-center justify-between cursor-pointer list-none">
+              <div class="flex items-center gap-3">
+                <h3 class="text-lg font-serif text-text-primary">{cat.label}</h3>
+                <span class="text-xs font-mono bg-accent/10 text-accent border border-accent/20 px-2 py-0.5 rounded-full">
+                  {certs.length}
+                </span>
+              </div>
+              <svg
+                class="w-5 h-5 text-text-muted transition-transform duration-200 group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </summary>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2">
+              {certs.map((cert) => (
+                <li>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${cert.name} certification (opens in new tab)`}
+                    class="block px-3 py-2 text-sm text-text-secondary hover:text-accent hover:bg-bg-subtle/50 hover:pl-4 rounded transition-all duration-150"
+                  >
+                    {cert.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.cert-logo-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      if (!category) return;
+      document.querySelectorAll('.cert-detail').forEach((d) => {
+        const el = d as HTMLDetailsElement;
+        el.open = el.dataset.category === category;
+      });
+      const target = document.querySelector(`.cert-detail[data-category="${category}"]`) as HTMLDetailsElement | null;
+      if (!target) return;
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  document.getElementById('expand-all-certs')?.addEventListener('click', () => {
+    document.querySelectorAll('.cert-detail').forEach((d) => {
+      (d as HTMLDetailsElement).open = true;
+    });
+  });
+
+  document.getElementById('collapse-all-certs')?.addEventListener('click', () => {
+    document.querySelectorAll('.cert-detail').forEach((d) => {
+      (d as HTMLDetailsElement).open = false;
+    });
+  });
+</script>

@@ -1,0 +1,33 @@
+---
+import resume from '../data/resume';
+import { skillCategories } from '../data/resume';
+---
+
+<section id="skills" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-slate section-glow-top" aria-labelledby="skills-heading">
+  <div class="section-container">
+    <span class="text-xs font-mono text-accent/40 mb-1 block">05</span>
+    <h2 id="skills-heading" class="section-heading">Skills</h2>
+    <div class="section-rule"></div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      {skillCategories.map((cat) => {
+        const skills = resume.skills.filter((s) => s.category === cat.key);
+        return (
+          <div class="card-interactive reveal">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>
+              <h3 class="text-sm font-mono text-text-muted uppercase tracking-wider">
+                {cat.label}
+              </h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <span class="tag">{skill.name}</span>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+import resume from '../data/resume';
+import GradCap from './icons/GradCap.astro';
+---
+
+<section id="education" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-purple section-glow-left" aria-labelledby="education-heading">
+  <div class="section-container">
+    <span class="text-xs font-mono text-accent/40 mb-1 block">03</span>
+    <h2 id="education-heading" class="section-heading">Education</h2>
+    <div class="section-rule"></div>
+
+    <article class="card-interactive accent-border-left pl-6 md:pl-8 reveal">
+      <div class="flex items-center gap-3 mb-5">
+        <GradCap class="w-6 h-6 text-accent flex-shrink-0" />
+        <h3 class="text-xl md:text-2xl font-serif text-text-primary">
+          {resume.education[0].school}
+        </h3>
+      </div>
+
+      <div class="space-y-4">
+        {resume.education.map((edu) => (
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+            <p class="text-text-primary font-sans">{edu.degree}</p>
+            <span class="text-sm font-mono text-text-muted whitespace-nowrap">
+              {edu.date}
+            </span>
+          </div>
+        ))}
+      </div>
+    </article>
+
+    <!-- Decorative line -->
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-bg-subtle to-transparent mt-8" aria-hidden="true"></div>
+  </div>
+</section>

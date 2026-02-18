@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Certifications from '../components/Certifications.astro';
+import Skills from '../components/Skills.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout>
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <Nav client:idle />
+  <Hero />
+  <main id="main">
+    <About />
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-accent/15 to-transparent" aria-hidden="true"></div>
+    <Experience />
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-accent/15 to-transparent" aria-hidden="true"></div>
+    <Education />
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-accent/15 to-transparent" aria-hidden="true"></div>
+    <Certifications />
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-accent/15 to-transparent" aria-hidden="true"></div>
+    <Skills />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  if (reveals.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    reveals.forEach((el) => observer.observe(el));
+  }
+
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+          progressBar.style.transform = `scaleX(${progress})`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+</script>

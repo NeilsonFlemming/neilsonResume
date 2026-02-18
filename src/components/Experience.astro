@@ -1,0 +1,35 @@
+---
+import resume from '../data/resume';
+---
+
+<section id="experience" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-blue" aria-labelledby="experience-heading">
+  <div class="section-container">
+    <div class="flex items-baseline justify-between gap-4 flex-wrap">
+      <div>
+        <span class="text-xs font-mono text-accent/40 mb-1 block">02</span>
+        <h2 id="experience-heading" class="section-heading">Experience</h2>
+      </div>
+    </div>
+    <div class="section-rule"></div>
+
+    <div class="relative space-y-8">
+      <!-- Timeline connector line -->
+      <div class="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-accent/20 via-bg-subtle to-transparent ml-[1.5px] hidden md:block" aria-hidden="true"></div>
+
+      {resume.work.map((job) => (
+        <article class="card-interactive accent-border-left pl-6 md:pl-8 reveal">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+            <h3 class="text-xl md:text-2xl font-serif text-text-primary">
+              <span class="border-b border-accent/20 pb-0.5">{job.company}</span>
+            </h3>
+            <span class="text-sm font-mono text-text-muted whitespace-nowrap">
+              {job.period}
+            </span>
+          </div>
+          <p class="text-sm font-sans text-accent mb-4">{job.role}</p>
+          <p class="text-text-secondary leading-relaxed">{job.achievements}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
