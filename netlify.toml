@@ -31,3 +31,24 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Redirect www.neilsonflemming.com to apex
+[[redirects]]
+  from = "https://www.neilsonflemming.com/*"
+  to = "https://neilsonflemming.com/:splat"
+  status = 301
+  force = true
+
+# Redirect neilsonflemming.nyc to canonical .com
+[[redirects]]
+  from = "https://neilsonflemming.nyc/*"
+  to = "https://neilsonflemming.com/:splat"
+  status = 301
+  force = true
+
+# Redirect www.neilsonflemming.nyc to canonical .com
+[[redirects]]
+  from = "https://www.neilsonflemming.nyc/*"
+  to = "https://neilsonflemming.com/:splat"
+  status = 301
+  force = true

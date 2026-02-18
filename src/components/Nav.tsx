@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'preact/hooks';
 
-const sections = ['home', 'about', 'experience', 'education', 'certifications', 'skills'];
+const sections = ['home', 'about', 'experience', 'education', 'certifications', 'skills', 'contact'];
 
 const navLinks = [
   { id: 'about', label: 'About' },
@@ -54,6 +54,15 @@ function IconCode({ className }: { className?: string }) {
   );
 }
 
+function IconMail({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="M22 4l-10 8L2 4" />
+    </svg>
+  );
+}
+
 const mobileNavItems = [
   { id: 'home', label: 'NF', Icon: null },
   { id: 'about', label: 'About', Icon: IconUser },
@@ -61,6 +70,7 @@ const mobileNavItems = [
   { id: 'education', label: 'Edu', Icon: IconGradCap },
   { id: 'certifications', label: 'Certs', Icon: IconBadge },
   { id: 'skills', label: 'Skills', Icon: IconCode },
+  { id: 'contact', label: 'Contact', Icon: IconMail },
 ];
 
 export default function Nav() {
@@ -132,23 +142,36 @@ export default function Nav() {
             NF
           </a>
 
-          <ul className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  onClick={(e) => handleClick(e, link.id)}
-                  className={`px-3 py-1.5 text-sm font-sans rounded-md transition-all duration-200 ${
-                    activeSection === link.id
-                      ? 'text-accent bg-accent/10'
-                      : 'text-text-muted hover:text-text-primary'
-                  }`}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-1">
+            <ul className="flex items-center gap-1">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => handleClick(e, link.id)}
+                    className={`px-3 py-1.5 text-sm font-sans rounded-md transition-all duration-200 ${
+                      activeSection === link.id
+                        ? 'text-accent bg-accent/10'
+                        : 'text-text-muted hover:text-text-primary'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              onClick={(e) => handleClick(e, 'contact')}
+              className={`ml-3 px-4 py-1.5 text-sm font-sans rounded-md border transition-all duration-200 ${
+                activeSection === 'contact'
+                  ? 'text-accent bg-accent/10 border-accent/30'
+                  : 'text-accent border-accent/30 hover:bg-accent/10'
+              }`}
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </nav>
 
