@@ -24,9 +24,9 @@ import headshot from '../../public/images/NFlemming_Headshot.png';
 
       <!-- Content -->
       <div class="md:col-span-8">
-        <span class="text-xs font-mono text-accent/40 mb-1 block">01</span>
-        <h2 id="about-heading" class="section-heading">About</h2>
-        <div class="section-rule"></div>
+        <span class="text-xs font-mono text-accent/40 mb-1 block text-center md:text-left">01</span>
+        <h2 id="about-heading" class="section-heading text-center md:text-left">About</h2>
+        <div class="section-rule mx-auto md:mx-0"></div>
 
         <div class="space-y-4 text-text-secondary leading-relaxed mb-8">
           {resume.aboutParagraphs.map((p) => <p>{p}</p>)}
@@ -51,12 +51,14 @@ import headshot from '../../public/images/NFlemming_Headshot.png';
         </div>
 
         <!-- Email CTA -->
-        <a
-          href={`mailto:${resume.email}`}
-          class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-text-primary font-sans font-medium text-sm rounded-md hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 hover:shadow-accent/30"
-        >
-          Get in Touch
-        </a>
+        <div class="flex justify-center md:justify-start">
+          <a
+            href={`mailto:${resume.email}`}
+            class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-text-primary font-sans font-medium text-sm rounded-md hover:bg-accent-hover transition-all duration-200 shadow-lg shadow-accent/20 hover:shadow-accent/30"
+          >
+            Get in Touch
+          </a>
+        </div>
       </div>
     </div>
   </div>

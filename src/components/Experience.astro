@@ -4,32 +4,76 @@ import resume from '../data/resume';
 
 <section id="experience" class="relative py-20 md:py-28 scroll-mt-20 bg-bg-section-blue" aria-labelledby="experience-heading">
   <div class="section-container">
-    <div class="flex items-baseline justify-between gap-4 flex-wrap">
-      <div>
-        <span class="text-xs font-mono text-accent/40 mb-1 block">02</span>
-        <h2 id="experience-heading" class="section-heading">Experience</h2>
-      </div>
+    <div class="text-center md:text-left">
+      <span class="text-xs font-mono text-accent/40 mb-1 block">02</span>
+      <h2 id="experience-heading" class="section-heading">Experience</h2>
     </div>
-    <div class="section-rule"></div>
+    <div class="section-rule mx-auto md:mx-0"></div>
 
-    <div class="relative space-y-8">
+    <!-- Expand / Collapse All -->
+    <div class="flex items-center justify-center gap-4 mb-6">
+      <button
+        type="button"
+        id="expand-all-exp"
+        class="text-xs font-mono uppercase tracking-wider text-text-muted hover:text-accent border border-bg-subtle/50 hover:border-accent/20 px-4 py-2 rounded-md transition-all duration-200"
+      >
+        Expand All
+      </button>
+      <button
+        type="button"
+        id="collapse-all-exp"
+        class="text-xs font-mono uppercase tracking-wider text-text-muted hover:text-accent border border-bg-subtle/50 hover:border-accent/20 px-4 py-2 rounded-md transition-all duration-200"
+      >
+        Collapse All
+      </button>
+    </div>
+
+    <div class="relative space-y-4">
       <!-- Timeline connector line -->
       <div class="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-accent/20 via-bg-subtle to-transparent ml-[1.5px] hidden md:block" aria-hidden="true"></div>
 
       {resume.work.map((job) => (
-        <article class="card-interactive accent-border-left pl-6 md:pl-8 reveal">
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
-            <h3 class="text-xl md:text-2xl font-serif text-text-primary">
-              <span class="border-b border-accent/20 pb-0.5">{job.company}</span>
-            </h3>
-            <span class="text-sm font-mono text-text-muted whitespace-nowrap">
-              {job.period}
-            </span>
+        <details class="card-interactive accent-border-left pl-6 md:pl-8 reveal group">
+          <summary class="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl md:text-2xl font-serif text-text-primary">
+                <span class="border-b border-accent/20 pb-0.5">{job.company}</span>
+              </h3>
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-mono text-text-muted whitespace-nowrap">{job.period}</span>
+                <svg
+                  class="w-5 h-5 text-text-muted transition-transform duration-200 group-open:rotate-180 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-sm font-sans text-accent mt-1">{job.role}</p>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-bg-subtle/50">
+            <p class="text-text-secondary leading-relaxed">{job.achievements}</p>
           </div>
-          <p class="text-sm font-sans text-accent mb-4">{job.role}</p>
-          <p class="text-text-secondary leading-relaxed">{job.achievements}</p>
-        </article>
+        </details>
       ))}
     </div>
   </div>
 </section>
+
+<script>
+  document.getElementById('expand-all-exp')?.addEventListener('click', () => {
+    document.querySelectorAll('#experience details').forEach((d) => {
+      (d as HTMLDetailsElement).open = true;
+    });
+  });
+
+  document.getElementById('collapse-all-exp')?.addEventListener('click', () => {
+    document.querySelectorAll('#experience details').forEach((d) => {
+      (d as HTMLDetailsElement).open = false;
+    });
+  });
+</script>
