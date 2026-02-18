@@ -64,7 +64,6 @@ function IconMail({ className }: { className?: string }) {
 }
 
 const mobileNavItems = [
-  { id: 'home', label: 'NF', Icon: null },
   { id: 'about', label: 'About', Icon: IconUser },
   { id: 'experience', label: 'Exp', Icon: IconBriefcase },
   { id: 'education', label: 'Edu', Icon: IconGradCap },
