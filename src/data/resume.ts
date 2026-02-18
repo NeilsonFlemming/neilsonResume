@@ -20,7 +20,7 @@ export interface WorkExperience {
 export interface Certification {
   name: string;
   url: string;
-  category: 'shopify' | 'salesforce' | 'cloud' | 'development' | 'methodology' | 'retail';
+  category: 'shopify' | 'salesforce' | 'cloud' | 'AI' | 'development' | 'methodology' | 'retail';
 }
 
 export interface Skill {
@@ -189,7 +189,8 @@ const resume: ResumeData = {
     { name: 'AWS Certified Cloud Practitioner', url: 'https://www.credly.com/badges/8de6bd4e-136a-4f4f-b234-ff474c90146c', category: 'cloud' },
     { name: 'Google Cloud Associate Cloud Engineer', url: 'https://www.credly.com/badges/350ee9d1-783c-4384-84fa-04818a2f1f34', category: 'cloud' },
     { name: 'Microsoft Azure Fundamentals', url: 'https://learn.microsoft.com/en-us/users/neilsonflemmingmailcitytechcunyedu-5313/credentials/b6a73dc67f1bf7b1', category: 'cloud' },
-    { name: 'Oracle Cloud Infrastructure AI Foundations', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=B9D0ED2D5ADAD6D18DFDB2494C6EC436E5320C3E68E0899FFF6154D21D9D07E3', category: 'cloud' },
+    { name: 'Oracle Cloud Infrastructure AI Foundations', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=B9D0ED2D5ADAD6D18DFDB2494C6EC436E5320C3E68E0899FFF6154D21D9D07E3', category: 'AI' },
+    { name: 'Google Generative AI Leader', url: '', category: 'AI' },
     { name: 'Oracle Database for Developers', url: 'https://drive.google.com/file/d/1iEw_EcmWhSUBEx3XoOwPbFIXo6gu4EBJ/view', category: 'cloud' },
     { name: 'VMware VCA — Data Center Virtualization', url: 'https://drive.google.com/file/d/1AzWwlK8hVC5Zm-EvJOTudUBJGK-kOegv/view', category: 'cloud' },
     { name: 'VMware VCA — Cloud', url: 'https://drive.google.com/file/d/1ghPKcVaRDnOA7MmWMvh52xSFejqctYLt/view', category: 'cloud' },
@@ -210,6 +211,7 @@ export default resume;
 export const certCategories = [
   { key: 'shopify' as const, label: 'Shopify' },
   { key: 'salesforce' as const, label: 'Salesforce' },
+  { key: 'AI' as const, label: 'Artificial Intelligence' },
   { key: 'cloud' as const, label: 'Cloud & Infrastructure' },
   { key: 'development' as const, label: 'Development' },
   { key: 'methodology' as const, label: 'Methodology' },
