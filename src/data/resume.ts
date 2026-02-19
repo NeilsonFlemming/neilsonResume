@@ -190,7 +190,7 @@ const resume: ResumeData = {
     { name: 'Google Cloud Associate Cloud Engineer', url: 'https://www.credly.com/badges/350ee9d1-783c-4384-84fa-04818a2f1f34', category: 'cloud' },
     { name: 'Microsoft Azure Fundamentals', url: 'https://learn.microsoft.com/en-us/users/neilsonflemmingmailcitytechcunyedu-5313/credentials/b6a73dc67f1bf7b1', category: 'cloud' },
     { name: 'Oracle Cloud Infrastructure AI Foundations', url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=B9D0ED2D5ADAD6D18DFDB2494C6EC436E5320C3E68E0899FFF6154D21D9D07E3', category: 'AI' },
-    { name: 'Google Generative AI Leader', url: '', category: 'AI' },
+    { name: 'Google Generative AI Leader', url: 'https://www.credly.com/badges/b2076a4e-eee7-4178-a1c2-8a62ecf9ce6a/public_url', category: 'AI' },
     { name: 'Oracle Database for Developers', url: 'https://drive.google.com/file/d/1iEw_EcmWhSUBEx3XoOwPbFIXo6gu4EBJ/view', category: 'cloud' },
     { name: 'VMware VCA — Data Center Virtualization', url: 'https://drive.google.com/file/d/1AzWwlK8hVC5Zm-EvJOTudUBJGK-kOegv/view', category: 'cloud' },
     { name: 'VMware VCA — Cloud', url: 'https://drive.google.com/file/d/1ghPKcVaRDnOA7MmWMvh52xSFejqctYLt/view', category: 'cloud' },
